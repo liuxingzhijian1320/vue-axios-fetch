@@ -3,7 +3,9 @@ import Router from 'vue-router'
 import setTitle from 'src/assets/scripts/settitle.js'; // 设置页面标题
 
 // 页面
+import home from 'src/views/home'
 import proxyTable from 'src/views/proxyTable'
+import vuexProxyTable from 'src/views/vuexProxyTable'
 
 
 Vue.use(Router)
@@ -21,12 +23,33 @@ const router = new Router({
 
     routes: [{
             path: '/',
-            name: 'proxyTable',
-            component: proxyTable,
+            name: 'home',
+            component: home,
             meta: {
-                title: '反向代理',
+                title: '首页',
             },
+            redirect: { //重定项 一面一打开显示那个页面
+                name: 'proxyTable',
+            },
+            children: [{
+                    path: '/proxyTable',
+                    name: 'proxyTable',
+                    component: proxyTable,
+                    // meta: {
+                    //     title: '反向代理',
+                    // },
+                },
+                {
+                    path: '/vuexProxyTable',
+                    name: 'vuexProxyTable',
+                    component: vuexProxyTable,
+                    // meta: {
+                    //     title: '反向代理',
+                    // },
+                },
+            ]
         },
+
         {
             path: '*',
             redirect: {

@@ -21,6 +21,13 @@ module.exports = {
                     '^/api': '/api'
                 }
             },
+            "/douyuapi": {
+                target: "http://open.douyucdn.cn",
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/douyuapi': '/api'
+                }
+            }
         },
         // Various Dev Server settings
         host: IP, // can be overwritten by process.env.HOST

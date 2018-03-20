@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 
 import mixins from './mixins';
 import * as filters from './filters';
@@ -34,6 +35,7 @@ Vue.mixin(mixins);
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
     template: '<App/>'
 })

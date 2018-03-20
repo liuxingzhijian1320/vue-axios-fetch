@@ -6,7 +6,8 @@
       <div class="inner">我scss的写法</div>
     </div>
 
-    <router-view/>
+    <router-view></router-view>
+
   </div>
 </template>
 
