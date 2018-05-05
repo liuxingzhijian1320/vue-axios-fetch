@@ -6,6 +6,8 @@ import setTitle from 'src/assets/scripts/settitle.js'; // 设置页面标题
 import home from 'src/views/home'
 import proxyTable from 'src/views/proxyTable'
 import vuexProxyTable from 'src/views/vuexProxyTable'
+import study from 'src/views/study'
+import email from 'src/views/email'
 
 
 Vue.use(Router)
@@ -48,6 +50,22 @@ const router = new Router({
                     // },
                 },
             ]
+        },
+        {
+            path: '/study',
+            name: 'study',
+            component: study,
+            meta: {
+                title: 'vuex的学习',
+            },
+        },
+        {
+            path: '/email',
+            name: 'email',
+            component: email,
+            meta: {
+                title: '发邮件',
+            },
         },
 
         {
