@@ -11,4 +11,5 @@ export default {
          */
         fetch: proxyRequest,
     },
+
 }
